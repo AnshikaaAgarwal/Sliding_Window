@@ -16,8 +16,10 @@ class LargestSubarray{
                 j++;
             }
             else if(sum>k){
+                while(sum>k){
                 sum=sum-arr[i];
                 i++;
+                }
                 if(sum==k){
                     max=Math.max(max,j-i+1);
                 }
@@ -28,7 +30,7 @@ class LargestSubarray{
 
     }
     public static void main(String[] args) {
-        int [] arr={2,8,2,3,1,4,8,1,1,5,5};
+        int [] arr={2,8,4,3,1,4,8,1,1,5,5};
         int k=10;
         int res=fun(arr,k);
         System.out.println(res);
